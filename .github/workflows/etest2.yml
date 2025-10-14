@@ -1,0 +1,21 @@
+name: Simplest Workflow
+
+on:
+  workflow_dispatch:
+    inputs:
+      name: 
+        description: "Greeting"
+        default: "World"
+        required: true
+        type: string
+    
+jobs:
+  greet:
+    name: "Greetings Action"
+    runs-on:
+      - ubuntu-latest
+    steps:
+      - name: Send greeting
+        run: |
+          echo "hello ${{github.event.inputs.name}}"
+      
