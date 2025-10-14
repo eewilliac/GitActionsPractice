@@ -1,0 +1,10 @@
+name: Basic Workflow X
+
+on:
+  workflow_dispatch:
+    inputs:
+      name:
+        description: "name of person"
+        default: "world"
+        required: true
+        type: string
